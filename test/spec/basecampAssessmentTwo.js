@@ -85,3 +85,71 @@ describe("indexFinder should return the indexes from the randomNumber array", fu
 		expect(indexes).toEqual([0,1,2,3,4,5,6,7])
 	});
 });
+
+var me = {firstname:"Jared", age:28, state:"Utah"};
+
+me.faveColor = "Green"
+
+var message = {
+	date: new Date(),
+	userName: me.firstname
+  };
+ 
+  message["text"] = "Don't drink the Coffee"
+
+  var adjustCount = {
+	upVote : function (num) {
+	  return num + 1;
+	},
+	downVote : function (num) {
+	  return num - 1;
+	}
+  };
+
+  var myFriends = [
+	"Ean",
+	"Josh",
+	"Kevin",
+	"Kendall"
+  ];
+  myFriends[4]="Megan"
+ 
+  var myArray = [1, 2, 3, 4];
+  var myArrayCopy = myArray
+  
+  var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
+  function evensOnly() {
+	var evensArray=[];
+	for (let i=0; i<myNumbers.length; i++) {
+	  if ((myNumbers[i] % 2) == 0) {
+		evensArray.push(myNumbers[i]);
+	  }
+	}
+	return evensArray;
+  }
+	evensOnly();
+	
+	var peopleIknow = [
+  { name: "Steve", friend: true },
+  { name: "Dan", friend: false },
+  { name: "Bart", friend: true },
+  { name: "Sarah", friend: false },
+  { name: "Michelle", friend: false },
+	{ name: "Holly", friend: true }
+	];
+	
+	var trueFriends = peopleIknow.filter (function (element) {
+		return element.friend === true;
+	});
+	console.log(trueFriends);
+
+	/*let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
+	var indexes = [];
+	function indexFinder(array){
+		array.map(function (element, index){
+		 indexes.push(index)
+    })
+    return indexes
+	};
+	indexFinder(randomNumbers);
+*/
